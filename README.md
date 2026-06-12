@@ -29,6 +29,17 @@ actionable personal-growth insights. It is explicitly NOT fortune-telling.
 
 ![Dream Scorecard](ending.png)
 
+## Architecture Overview
+User Input
+    ↓
+CoordinatorAgent
+    ├── EmotionAgent → Detects emotions & scores
+    ├── SymbolAgent  → Identifies dream symbols & themes
+    ├── ActionAgent  → Suggests daily actions, weekly challenges, reflection
+    └── GrowthAgent  → Tracks recurring patterns & generates growth insights
+    ↓
+DreamToLife Report
+
 ## 🏆 Built for
 Agents League Hackathon — Creative Apps Track  
 Microsoft Innovation Studio, June 2026
