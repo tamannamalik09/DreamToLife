@@ -21,13 +21,13 @@ actionable personal-growth insights. It is explicitly NOT fortune-telling.
 
 ## 📸 Screenshots
 
-![Dream Input](screenshots/starting.png)
+![Dream Input](Starting.png)
 
-![Emotion Analysis](screenshots/dream_summary.png)
+![Emotion Analysis](dream_summary.png)
 
-![Dream Narrative](screenshots/dreamnarrative.png)
+![Dream Narrative](dreamnarrative.png)
 
-![Dream Scorecard](screenshots/ending.png)
+![Dream Scorecard](ending.png)
 
 ## 🏆 Built for
 Agents League Hackathon — Creative Apps Track  
