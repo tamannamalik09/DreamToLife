@@ -19,11 +19,21 @@ actionable personal-growth insights. It is explicitly NOT fortune-telling.
 - Streamlit (web UI)
 - Built with GitHub Copilot (VS Code)
 
+## 📸 Screenshots
+
+![Dream Input](screenshots/starting.png)
+
+![Emotion Analysis](screenshots/dream_summary.png)
+
+![Dream Narrative](screenshots/dreamnarrative.png)
+
+![Dream Scorecard](screenshots/ending.png)
+
+## 🏆 Built for
+Agents League Hackathon — Creative Apps Track  
+Microsoft Innovation Studio, June 2026
+
 ## Run Locally
 ```bash
 pip install streamlit
 streamlit run app.py
-
-## Built for
-Agents League Hackathon - Creative Apps Track
-Microsoft Innovation Studio, June 2026
