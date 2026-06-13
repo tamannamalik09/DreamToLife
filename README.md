@@ -53,8 +53,35 @@ In this demo, you’ll see:
 - Future roadmap and vision for expansion  
 
 
-## Architecture Overview
+## 🤖 Built with GitHub Copilot
 
+This project was developed using **GitHub Copilot** in VS Code:
+
+- Used Copilot suggestions to generate the multi-agent 
+  architecture (CoordinatorAgent, SymbolAgent, EmotionAgent, 
+  GrowthAgent, NarrativeAgent)
+- Leveraged Copilot Chat for debugging and code explanation
+- Copilot assisted in structuring the Streamlit UI in app.py
+- Used Copilot to write the dream journal storage logic
+
+
+## 🧠 Microsoft IQ Integration (Foundry IQ)
+
+DreamToLife integrates a **Foundry IQ-style knowledge 
+retrieval layer** via `foundry_iq.py`:
+
+- The `FoundryIQLayer` class performs grounded knowledge 
+  retrieval from `symbols.json` (50+ dream symbols)
+- Returns cited, source-attributed results for each detected 
+  symbol
+- Integrated into `SymbolAgent` — enriches symbol lookups 
+  with grounded knowledge while maintaining full backward 
+  compatibility
+- Gracefully falls back if no match is found
+
+
+ ## Architecture Overview
+ 
 ```text
 User Input
     │
