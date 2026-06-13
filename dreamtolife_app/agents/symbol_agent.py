@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 import re
 
+# Foundry IQ Integration: Import the knowledge retrieval layer for enriched lookups
+from .foundry_iq import FoundryIQLayer
+
 
 class SymbolAgent:
     """Loads the symbols DB and matches keywords to detect symbols and themes."""
@@ -19,6 +22,9 @@ class SymbolAgent:
         except Exception:
             self.db = {}
 
+        # Foundry IQ Integration: Initialize the knowledge retrieval layer
+        self.foundry_iq = FoundryIQLayer()
+        
         self._compile_index()
 
     def _compile_index(self):
@@ -34,12 +40,27 @@ class SymbolAgent:
         t = text.lower()
         found = set()
         themes = set()
+        
         for symbol, keywords, sym_themes in self.index:
             for k in keywords:
                 if k in t:
                     found.add(symbol)
-                    for th in sym_themes:
-                        themes.add(th)
+                    
+                    # Foundry IQ Integration: Enrich symbol lookup with knowledge retrieval
+                    # This retrieves grounded, cited information about the symbol
+                    enriched_data = self.foundry_iq.retrieve(symbol, self.db)
+                    
+                    # Use themes from enriched retrieval if available, otherwise use index
+                    if enriched_data.get("found") and enriched_data.get("results"):
+                        # Add themes from Foundry IQ enriched results
+                        for result in enriched_data["results"]:
+                            for th in result.get("themes", []):
+                                themes.add(th)
+                    else:
+                        # Graceful fallback: use original index themes
+                        for th in sym_themes:
+                            themes.add(th)
+                    
                     break
 
         return sorted(list(found)), sorted(list(themes))
