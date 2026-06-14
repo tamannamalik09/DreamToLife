@@ -2,9 +2,7 @@
 
 > Transform your dream impressions into reflective, actionable insights.
 
-DreamToLife is a beginner-friendly Python multi-agent system that helps 
-users reflect on their dreams and convert subconscious patterns into 
-actionable personal-growth insights. It is explicitly NOT fortune-telling.
+DreamToLife is a beginner-friendly Python multi-agent system that helps users reflect on their dreams and convert subconscious patterns into actionable personal-growth insights. It is explicitly NOT fortune-telling.
 
 
 ## ✨ Features
@@ -12,7 +10,6 @@ actionable personal-growth insights. It is explicitly NOT fortune-telling.
 - 🔍 Symbol detection (50+ symbols knowledge base)
 - 📋 Action suggestions (daily + weekly + reflection questions)
 - 📈 Growth tracking across multiple dreams
-- 💾 JSON-based dream journal (`dream_journal.json`)
 - 🖼️ AI image prompt generator
 
 
@@ -24,13 +21,13 @@ actionable personal-growth insights. It is explicitly NOT fortune-telling.
 
 ## 📸 Screenshots
 
-![Dream Input](Starting.png)
+!Dream Input(Starting.png)
 
-![Emotion Analysis](dream_summary.png)
+!Emotion Analysis(dream_summary.png)
 
-![Dream Narrative](dreamnarrative.png)
+!Dream Narrative(dreamnarrative.png)
 
-![Dream Scorecard](ending.png)
+!Dream Scorecard(ending.png)
 
 
 ## Run Locally
@@ -57,9 +54,7 @@ In this demo, you’ll see:
 
 This project was developed using **GitHub Copilot** in VS Code:
 
-- Used Copilot suggestions to generate the multi-agent 
-  architecture (CoordinatorAgent, SymbolAgent, EmotionAgent, 
-  GrowthAgent, NarrativeAgent)
+- Used Copilot suggestions to generate the multi-agent architecture (CoordinatorAgent, SymbolAgent, EmotionAgent, GrowthAgent, NarrativeAgent)
 - Leveraged Copilot Chat for debugging and code explanation
 - Copilot assisted in structuring the Streamlit UI in app.py
 - Used Copilot to write the dream journal storage logic
@@ -67,16 +62,11 @@ This project was developed using **GitHub Copilot** in VS Code:
 
 ## 🧠 Microsoft IQ Integration (Foundry IQ)
 
-DreamToLife integrates a **Foundry IQ-style knowledge 
-retrieval layer** via `foundry_iq.py`:
+DreamToLife integrates a **Foundry IQ-style knowledge retrieval layer** via `foundry_iq.py`:
 
-- The `FoundryIQLayer` class performs grounded knowledge 
-  retrieval from `symbols.json` (50+ dream symbols)
-- Returns cited, source-attributed results for each detected 
-  symbol
-- Integrated into `SymbolAgent` — enriches symbol lookups 
-  with grounded knowledge while maintaining full backward 
-  compatibility
+- The `FoundryIQLayer` class performs grounded knowledge retrieval from `symbols.json` (50+ dream symbols)
+- Returns cited, source-attributed results for each detected symbol
+- Integrated into `SymbolAgent` — enriches symbol lookups with grounded knowledge while maintaining full backward compatibility
 - Gracefully falls back if no match is found
 
 
