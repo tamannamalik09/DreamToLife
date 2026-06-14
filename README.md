@@ -21,13 +21,13 @@ DreamToLife is a beginner-friendly Python multi-agent system that helps users re
 
 ## 📸 Screenshots
 
-!Dream Input(Starting.png)
+![Dream Input](Starting.png)
 
-!Emotion Analysis(dream_summary.png)
+![Emotion Analysis](dream_summary.png)
 
-!Dream Narrative(dreamnarrative.png)
+![Dream Narrative](dreamnarrative.png)
 
-!Dream Scorecard(ending.png)
+![Dream Scorecard](ending.png)
 
 
 ## Run Locally
